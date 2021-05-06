@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+	Route::get('/', function () {
+	    return view('welcome');
+	});
+
+ 	Route::get('/clientes', [ClientesController::class, 'nomesClientes']);
+	Route::get('/clientes/cadastro', [ClientesController::class, 'cadastro']);
+	Route::post('/clientes/novo', [ClientesController::class, 'novo'])->name('cliente_novo');
