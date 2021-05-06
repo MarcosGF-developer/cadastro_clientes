@@ -63,7 +63,7 @@ class ClientesController extends Controller
             $cliente->estado = $estado;
 
             if($cliente->save()){
-                $mensagem = "Usuário $nome alterado com sucesso!";
+                $mensagem = "Cliente $nome alterado com sucesso!";
                 $classe = "success";
             }else {
                 $mensagem = "Não foi possível fazer a alteração!";
