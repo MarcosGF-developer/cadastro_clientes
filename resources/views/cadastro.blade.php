@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h1>Cadastro de Clientes</h1>
-	<form method="post" action="{{ route('cliente_novo') }}">
+	<form method="get" action="{{ route('cliente_novo') }}">
 		@csrf
 		<input type="text" name="nome" placeholder="Nome">
 		<input type="text" name="endereco" placeholder="Endereço">

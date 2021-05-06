@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClientesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,7 @@ use Illuminate\Support\Facades\Route;
 
  	Route::get('/clientes', [ClientesController::class, 'nomesClientes']);
 	Route::get('/clientes/cadastro', [ClientesController::class, 'cadastro']);
-	Route::post('/clientes/novo', [ClientesController::class, 'novo'])->name('cliente_novo');
+
+	Route::get('/clientes/novo', [ClientesController::class, 'novo'])->name('cliente_novo');
+
+
