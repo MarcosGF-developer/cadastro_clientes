@@ -18,9 +18,13 @@ use App\Http\Controllers\ClientesController;
 	    return view('welcome');
 	});
 
- 	Route::get('/clientes', [ClientesController::class, 'nomesClientes']);
-	Route::get('/clientes/cadastro', [ClientesController::class, 'cadastro']);
+ 	Route::get('/clientes', [ClientesController::class, 'nomesClientes'])->name('clientes_listar');
+	Route::get('/clientes/cadastro', [ClientesController::class, 'cadastro'])->name('clientes_cadastrar');
 
 	Route::get('/clientes/novo', [ClientesController::class, 'novo'])->name('cliente_novo');
+
+	Route::post('/clientes/alterar/{id}', [ClientesController::class, 'alterar'])->name('clientes_alterar');
+	Route::get('/clientes/alterar/{id}', [ClientesController::class, 'telaAlteracao'])->name('clientes_tela_alterar');
+	Route::get('/clientes/excluir/{id}', [ClientesController::class, 'excluir'])->name('clientes_excluir');
 
 

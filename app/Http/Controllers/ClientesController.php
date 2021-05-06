@@ -35,10 +35,10 @@ class ClientesController extends Controller
             $cliente = Cliente::find($id);
 
             if($cliente->delete()){
-                $mensagem = "Usuário excluído com sucesso!";
+                $mensagem = "Cliente excluído com sucesso!";
                 $classe = "success";
             }else{
-                $mensagem = "Usuário $nome não foi excluído!";
+                $mensagem = "Cliente $nome não foi excluído!";
                 $classe = "danger";
             }
 
@@ -92,10 +92,10 @@ class ClientesController extends Controller
         	$cliente->save();
 
         	if ($cliente->save()){
-        		$mensagem = "Usuário $nome inserido com Sucesso!";
+        		$mensagem = "Cliente $nome inserido com Sucesso!";
                 $classe = "success";
         	} else {
-        		$mensagem = "Usuário não foi inserido!";
+        		$mensagem = "Cliente não foi inserido!";
                 $classe = "danger";
         	}
 
