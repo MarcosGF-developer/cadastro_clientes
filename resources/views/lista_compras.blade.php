@@ -17,7 +17,7 @@
 			@foreach ($compras as $co)
 			<tr>
 				<td>{{ $co->id }}</td>
-				<td>Indefinido</td>
+				<td>{{ $co->cliente->nome }}</td>
 				<td>{{ $co->valor_total_compra }}</td>
 				<td>{{ $co->created_at }}</td>
 				

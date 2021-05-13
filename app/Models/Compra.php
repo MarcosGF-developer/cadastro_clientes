@@ -14,7 +14,7 @@ class Compra extends Model
     protected $primaryKey = 'id';
 
     function cliente(){
-    	return $this->belongsTo('App\Cliente', 'id_cliente', 'id');
+    	return $this->belongsTo('App\Models\Cliente', 'id_cliente', 'id');
     }
 
     

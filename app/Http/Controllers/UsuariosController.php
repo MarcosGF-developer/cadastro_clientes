@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Usuario;
+use App\Models\Cliente;
+use App\Models\Compra;
 
 class UsuariosController extends Controller
 {
