@@ -34,6 +34,12 @@
 			@endforeach
 		</tbody>
 	</table>
+	<div>
+		<a class="btn btn-light mt-2" href="{{ route('compras_cadastrar') }}">Nova Compra</a>
+	</div>
+	<div>
+		<a class="btn btn-light mt-2" href="{{ route('compras_listar') }}">Listar Compras</a>
+	</div>
 
 	<script>
 		function exclui(id){

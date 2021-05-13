@@ -2,7 +2,7 @@
 	@section('conteudo')
 	<h1>Lista de Compras Realizadas</h1>
 	<div>
-		<a class="btn btn-secondary mt-3" href="{{ route('compras_cadastrar') }}">Nova Compra</a>
+		<a class="btn btn-light mt-3" href="{{ route('compras_cadastrar') }}">Nova Compra</a>
 	</div>
 	<table class="table table-striped mt-3">
 		<thead>

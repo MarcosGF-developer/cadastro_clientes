@@ -27,8 +27,9 @@ class ComprasController extends Controller
     function telaAlteracao($id){
         
             $compra = Compra::find($id);
+            $clientes = Cliente::all();
 
-            return view("alteracao_compras", ['co' => $compra]);
+            return view("alteracao_compras", ['co' => $compra, "clientes"=>$clientes]);
   
     }
 
@@ -73,10 +74,12 @@ class ComprasController extends Controller
     function novo(Request $req){
        
         	$id_cliente = $req->input('id_cliente');
+            $valor_total_compra = $req->input('valor_total_compra');
+
 
         	$compra = new Compra();
             $compra->id_cliente = $id_cliente;
-            $compra->valor_total_compra = 0; 
+            $compra->valor_total_compra = $valor_total_compra;
 
         	if ($compra->save()){
                 $mensagem = "Compra inserida com Sucesso!";
